@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans+SC" rel="stylesheet">
+        <title>Document</title>
+    </head>
+    <style>
+        body {
+            background: linear-gradient(black, white);
+        }
+        .container {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            width: 100vw;
+        }
+        .disc {
+            animation: 3s disc 1s forwards;
+            height: 170px;
+            top: 57%;
+            width: 170px;
+            z-index: 2;
+        }
+        .disc > div {
+            background-color: white;
+            border-radius: 50%;
+            height: 35px;
+            top: 70px;
+            width: 35px;
+            z-index: 4;
+        }
+        .center {
+            left: 0;
+            margin: auto;
+            position: absolute;
+            right: 0;
+        }
+        .guitar-1 {
+            border-radius: 50%;
+            height: 170px;
+            position: absolute;
+            transform: rotate(-180deg);
+            width: 170px;
+            z-index: 2;
+        }
+        .guitar-2 {
+            border-radius: 50%;
+            filter: blur(30px);
+            height: 150px;
+            position: absolute;
+            top: 55px;
+            width: 150px;
+        }
+        h1 {
+            color: white;
+            font-family: 'Alegreya Sans SC', sans-serif;
+            position: absolute;
+            top: 25%;
+        }
+        @keyframes disc {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(-280px) rotate(180deg);
+            }
+        }
+    </style>
+    <body>
+        <div class="container">
+            <h1>• piusic •</h1>
+            <div class="disc center">
+                <div class="center"></div>
+                <img src="./assets/guitar.jpeg" alt="guitar" class="guitar-1">
+                <img src="./assets/guitar.jpeg" alt="guitar-blur" class="guitar-2">
+            </div>
+        </div>
+    </body>
+</html>
